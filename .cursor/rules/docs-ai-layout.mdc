@@ -1,0 +1,29 @@
+---
+description: Keep collaboration docs structured and discoverable.
+alwaysApply: true
+---
+
+# Docs AI Layout
+
+## Core file roles
+
+- `docs/ai/PROJECT_CONTEXT.md` - stable project snapshot
+- `docs/ai/BOOTSTRAP_DIGEST.md` - short session recovery
+- `docs/ai/ACTIVE_WORK.md` - active queue
+- `docs/ai/FEATURE_REGISTRY.md` - feature registration
+- `docs/ai/PROGRESS_LOG.md` - append-only factual history
+- `docs/ai/TECH_DEBT.md` - explicit debt
+- `docs/ai/templates/` - reusable doc templates
+
+## Naming guidance
+
+- Feature IDs: `<DOMAIN>-F<nn>`
+- Slice IDs: `<FeatureID>-S<nn>`
+- Bug IDs: `BUG-<DOMAIN>-<nnn>`
+- ADR IDs: `ADR-<yyyyMMdd>-<nn>`
+
+## Placement rules
+
+- New design and implementation docs belong under `docs/ai/` or domain subfolders inside it.
+- Template examples belong only under `docs/ai/templates/`.
+- Session notes should be stored in `docs/ai/sessions/` when used.

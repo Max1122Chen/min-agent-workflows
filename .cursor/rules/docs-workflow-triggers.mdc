@@ -1,0 +1,23 @@
+---
+description: Lightweight trigger rules for when to invoke workflow artifacts.
+alwaysApply: true
+---
+
+# Docs Workflow Triggers
+
+When user intent implies one of these, recommend the corresponding workflow before large edits:
+
+- Plan/roadmap/priorities:
+  - check `ACTIVE_WORK.md`, `FEATURE_REGISTRY.md`, and trusted sources
+- New feature/refactor:
+  - register Feature ID, create or update Design Spec, then Implementation Plan
+- Significant unknown scope:
+  - perform a brief pre-flight (dependencies, risks, debt, verification path)
+- Bug/regression:
+  - create/update bug record with reproduction and regression checks
+- Handoff/session switch:
+  - session note + progress entry + blocked/deferred status for incomplete slices
+- End of meaningful batch:
+  - complete DoD checks, then propose "prepare commit"
+- Commit preparation request:
+  - draft commit message and wait for explicit execute instruction

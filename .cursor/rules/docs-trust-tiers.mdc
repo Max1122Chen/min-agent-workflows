@@ -1,0 +1,24 @@
+---
+description: Define which docs can drive planning versus reference-only docs.
+alwaysApply: true
+---
+
+# Docs Trust Tiers
+
+## Planning sources (high trust)
+
+- `docs/ai/ACTIVE_WORK.md`
+- `docs/ai/FEATURE_REGISTRY.md` (In Progress / Planned)
+- `docs/ai/TECH_DEBT.md` (Open)
+- recent `docs/ai/PROGRESS_LOG.md`
+- code, tests, and verify commands
+
+## Reference sources (do not auto-create backlog)
+
+- old roadmap files
+- docs explicitly marked Snapshot, Archived, or Reference
+- stale unchecked checklist sections in historical design docs
+
+## Conflict resolution
+
+If docs conflict with runtime truth, code/tests/verification outputs take precedence.
