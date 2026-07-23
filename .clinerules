@@ -1,0 +1,38 @@
+# Cline Rules: Agent Workflow Template
+
+## Doc Hierarchy
+
+All collaboration docs are in `docs/ai/`.
+
+### Session Start - Read Order
+1. `docs/ai/PROJECT_CONTEXT.md`
+2. `docs/ai/PROGRESS_LOG.md`
+3. `docs/ai/ACTIVE_WORK.md`
+4. `docs/ai/FEATURE_REGISTRY.md`
+
+### Trusted Planning Sources
+- `docs/ai/ACTIVE_WORK.md`
+- `docs/ai/FEATURE_REGISTRY.md` (In Progress / Planned)
+- `docs/ai/TECH_DEBT.md` (Open)
+- Recent `docs/ai/PROGRESS_LOG.md`
+- Code, tests, verification scripts
+
+### Reference-Only (no backlog inference)
+- Old roadmap/snapshot/archived docs
+- Stale unchecked checklist sections
+
+## Hard Constraints
+
+1. **Commit gate**: "Prepare commit" = draft only. Never commit without explicit approval.
+2. **Feature registration**: Register Feature ID in `FEATURE_REGISTRY.md` before large code edits.
+3. **Refactor discipline**: Target clear end state. Register debt for transitional code.
+4. **Doc priority**: If docs conflict with code/tests, code/tests win.
+
+## ID Scheme
+
+| Type | Format | Example |
+|------|--------|---------|
+| Feature | `<DOMAIN>-F<nn>` | `CORE-F01` |
+| Slice | `<FeatureID>-S<nn>` | `CORE-F01-S01` |
+| Bug | `BUG-<DOMAIN>-<nnn>` | `BUG-CORE-001` |
+| ADR | `ADR-<yyyyMMdd>-<nn>` | `ADR-20260723-01` |

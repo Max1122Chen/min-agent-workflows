@@ -2,10 +2,21 @@
 
 Use this guide to adapt this template to any new repository.
 
-## 1) Choose your mode
+## 1) Choose agent adapters
 
-- **Core only (agent-agnostic):** keep `docs/ai/`, delete `.cursor/`
-- **Core + Cursor layer:** keep both `docs/ai/` and `.cursor/rules/`
+Keep only the adapter files for agents you use:
+
+| Agent | File(s) to keep |
+|-------|-----------------|
+| Any agent | `docs/ai/` (always keep) |
+| **opencode** | `AGENTS.md`, `opencode.json`, `.opencode/` |
+| **Cursor** | `.cursor/rules/` |
+| **Claude Code** | `CLAUDE.md` |
+| **GitHub Copilot** | `.github/copilot-instructions.md` |
+| **Cline** | `.clinerules` |
+| **Windsurf** | `.windsurfrules` |
+
+Delete the adapter files for agents you do **not** use.
 
 ## 2) Fill project metadata
 
@@ -48,7 +59,7 @@ Mark old plans and snapshots as reference-only.
 
 ## 6) Enable/disable optional discipline
 
-- Keep `.cursor/rules/implementation-discipline.mdc` only if the repo benefits from stricter cleanup/refactor rules.
+- Keep `.cursor/rules/implementation-discipline.mdc` (or the corresponding section in `AGENTS.md`) only if the repo benefits from stricter cleanup/refactor rules.
 - Remove or adjust any rule that conflicts with your team process.
 
 ## 7) First bootstrap check

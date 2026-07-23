@@ -6,10 +6,22 @@ It turns the collaboration habits refined in personal projects into a reusable s
 
 ## Design
 
-- **Core layer (agent-agnostic):** docs, IDs, trust tiers, Done Definition, handoff process under `docs/ai/`
-- **Cursor layer (optional):** `.cursor/rules` policies that enforce the same discipline in Cursor
+- **Core layer (agent-agnostic):** `docs/ai/` — docs, IDs, trust tiers, Done Definition, handoff process
+- **Adapter layers (optional, per-agent):** rule/config files that enforce the same discipline in each agent
 
-You can use the core alone with any agent, or keep the Cursor layer when working in Cursor.
+### Supported Agents
+
+| Agent | Adapter File | Status |
+|-------|-------------|--------|
+| Any agent | `docs/ai/` (core, agent-agnostic) | ✅ Always active |
+| **opencode** | `AGENTS.md` + `opencode.json` + `.opencode/skills/` | ✅ |
+| **Cursor** | `.cursor/rules/` | ✅ |
+| **Claude Code** | `CLAUDE.md` | ✅ |
+| **GitHub Copilot** | `.github/copilot-instructions.md` | ✅ |
+| **Cline** | `.clinerules` | ✅ |
+| **Windsurf** | `.windsurfrules` | ✅ |
+
+You can use the core alone with any agent, or keep the agent-specific adapters you need.
 
 ## What it solves
 
@@ -22,8 +34,15 @@ You can use the core alone with any agent, or keep the Cursor layer when working
 ## Repository layout
 
 ```text
-docs/ai/                 Collaboration truth and workflow records
+docs/ai/                 Collaboration truth and workflow records (agent-agnostic)
 docs/ai/templates/       Design, plan, ADR, bug, session templates
+AGENTS.md                opencode rules
+opencode.json            opencode project config
+.opencode/skills/        opencode reusable skills
+CLAUDE.md                Claude Code rules
+.github/copilot-instructions.md   GitHub Copilot instructions
+.clinerules              Cline rules
+.windsurfrules           Windsurf rules
 .cursor/rules/           Optional Cursor enforcement layer
 INIT_GUIDE.md            How to initialize this template in a new repo
 ```
@@ -34,7 +53,7 @@ INIT_GUIDE.md            How to initialize this template in a new repo
 2. Fill project metadata in [`docs/ai/PROJECT_CONTEXT.md`](docs/ai/PROJECT_CONTEXT.md).
 3. Define domain codes and verification commands.
 4. Choose single-track or dual-track documentation mode.
-5. Keep `.cursor/rules/` if you use Cursor; remove it otherwise.
+5. Keep or remove adapter layers based on which agents you use.
 
 ## Core operating loop
 
