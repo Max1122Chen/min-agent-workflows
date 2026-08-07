@@ -24,6 +24,7 @@ alwaysApply: true
 ## 4) Context recovery
 
 When context may be stale, re-bootstrap from:
+- `docs/ai/WORKFLOW_PROFILE.md`
 - `docs/ai/BOOTSTRAP_DIGEST.md`
 - `docs/ai/PROJECT_CONTEXT.md`
 - `docs/ai/ACTIVE_WORK.md`

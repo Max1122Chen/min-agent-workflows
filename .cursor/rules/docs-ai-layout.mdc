@@ -7,6 +7,7 @@ alwaysApply: true
 
 ## Core file roles
 
+- `docs/ai/WORKFLOW_PROFILE.md` - deploy-time collaboration posture
 - `docs/ai/PROJECT_CONTEXT.md` - stable project snapshot
 - `docs/ai/BOOTSTRAP_DIGEST.md` - short session recovery
 - `docs/ai/ACTIVE_WORK.md` - active queue
@@ -14,6 +15,7 @@ alwaysApply: true
 - `docs/ai/PROGRESS_LOG.md` - append-only factual history
 - `docs/ai/TECH_DEBT.md` - explicit debt
 - `docs/ai/templates/` - reusable doc templates
+- `docs/ai/templates/WORKFLOW_PRESETS.md` - preset catalog
 
 ## Naming guidance
 

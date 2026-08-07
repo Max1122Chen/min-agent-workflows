@@ -6,11 +6,12 @@ This folder is the project collaboration truth for humans and agents.
 
 Use these files for "what to do next":
 
-1. `ACTIVE_WORK.md` - current short backlog
-2. `FEATURE_REGISTRY.md` - registered features (focus on In Progress / Planned)
-3. `TECH_DEBT.md` - open debt items
-4. `PROGRESS_LOG.md` - recent factual changes
-5. Code + tests + verify scripts - runtime truth overrides stale docs
+1. `WORKFLOW_PROFILE.md` - collaboration posture (configure if `unconfigured`)
+2. `ACTIVE_WORK.md` - current short backlog
+3. `FEATURE_REGISTRY.md` - registered features (focus on In Progress / Planned)
+4. `TECH_DEBT.md` - open debt items
+5. `PROGRESS_LOG.md` - recent factual changes
+6. Code + tests + verify scripts - runtime truth overrides stale docs
 
 Rules for trust tiers and exceptions:
 - If using Cursor: `.cursor/rules/docs-trust-tiers.mdc`
@@ -18,6 +19,7 @@ Rules for trust tiers and exceptions:
 
 ## Core files
 
+- `WORKFLOW_PROFILE.md` - deploy-time posture / presets (strictness, autonomy, role, language)
 - `PROJECT_CONTEXT.md` - stable high-level project snapshot
 - `BOOTSTRAP_DIGEST.md` - fast session recovery page
 - `ACTIVE_WORK.md` - human-maintained working queue
@@ -28,4 +30,4 @@ Rules for trust tiers and exceptions:
 
 ## Templates
 
-See `templates/` for Design, Implementation Plan, ADR, Bug Record, and Session Note templates.
+See `templates/` for Design, Implementation Plan, ADR, Bug Record, Session Note, and Workflow Preset templates.

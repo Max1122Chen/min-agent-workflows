@@ -4,10 +4,14 @@
 
 ### Startup Sequence
 Read these in order when starting a session:
-1. `docs/ai/PROJECT_CONTEXT.md`
-2. `docs/ai/PROGRESS_LOG.md` (latest entries)
-3. `docs/ai/ACTIVE_WORK.md`
-4. `docs/ai/FEATURE_REGISTRY.md` (In Progress / Planned)
+1. `docs/ai/WORKFLOW_PROFILE.md` — if `unconfigured`, ask meta-question once
+2. `docs/ai/PROJECT_CONTEXT.md`
+3. `docs/ai/PROGRESS_LOG.md` (latest entries)
+4. `docs/ai/ACTIVE_WORK.md`
+5. `docs/ai/FEATURE_REGISTRY.md` (In Progress / Planned)
+
+Preset catalog: `docs/ai/templates/WORKFLOW_PRESETS.md`.  
+`reconfigure workflow` re-runs the profile flow.
 
 ### Planning Trust
 HIGH TRUST (use for planning):
@@ -21,6 +25,7 @@ REFERENCE ONLY (do not create backlog from):
 - **Register Feature ID** before implementation (format: `<DOMAIN>-F<nn>`)
 - **Prepare commit = draft only**; execute only on approval
 - **Code/tests > docs** when they conflict
+- **Honor WORKFLOW_PROFILE.md**; profile cannot disable commit gate or trust tiers
 
 ### ID Formats
 - Feature: `<DOMAIN>-F<nn>` → `CORE-F01`

@@ -5,10 +5,14 @@
 All collaboration docs are in `docs/ai/`.
 
 ### Session Start - Read Order
-1. `docs/ai/PROJECT_CONTEXT.md`
-2. `docs/ai/PROGRESS_LOG.md`
-3. `docs/ai/ACTIVE_WORK.md`
-4. `docs/ai/FEATURE_REGISTRY.md`
+1. `docs/ai/WORKFLOW_PROFILE.md` — if `unconfigured`, ask meta-question once
+2. `docs/ai/PROJECT_CONTEXT.md`
+3. `docs/ai/PROGRESS_LOG.md`
+4. `docs/ai/ACTIVE_WORK.md`
+5. `docs/ai/FEATURE_REGISTRY.md`
+
+Preset catalog: `docs/ai/templates/WORKFLOW_PRESETS.md`.  
+`reconfigure workflow` re-runs the profile flow.
 
 ### Trusted Planning Sources
 - `docs/ai/ACTIVE_WORK.md`
@@ -27,6 +31,7 @@ All collaboration docs are in `docs/ai/`.
 2. **Feature registration**: Register Feature ID in `FEATURE_REGISTRY.md` before large code edits.
 3. **Refactor discipline**: Target clear end state. Register debt for transitional code.
 4. **Doc priority**: If docs conflict with code/tests, code/tests win.
+5. **Profile**: Honor `WORKFLOW_PROFILE.md`; cannot disable commit gate or trust tiers.
 
 ## ID Scheme
 

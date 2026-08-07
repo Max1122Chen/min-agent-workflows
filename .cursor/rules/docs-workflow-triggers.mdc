@@ -12,7 +12,7 @@ When user intent implies one of these, recommend the corresponding workflow befo
 - New feature/refactor:
   - register Feature ID, create or update Design Spec, then Implementation Plan
 - Significant unknown scope:
-  - perform a brief pre-flight (dependencies, risks, debt, verification path)
+  - perform a brief pre-flight (dependencies, risks, debt, verification path) — required when profile says so
 - Bug/regression:
   - create/update bug record with reproduction and regression checks
 - Handoff/session switch:
@@ -21,3 +21,7 @@ When user intent implies one of these, recommend the corresponding workflow befo
   - complete DoD checks, then propose "prepare commit"
 - Commit preparation request:
   - draft commit message and wait for explicit execute instruction
+- Profile `unconfigured` on first substantial work:
+  - ask meta-question once (`docs/ai/WORKFLOW_PROFILE.md` + `templates/WORKFLOW_PRESETS.md`)
+- User says `reconfigure workflow`:
+  - re-run profile flow and update `WORKFLOW_PROFILE.md`

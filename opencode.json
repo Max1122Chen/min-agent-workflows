@@ -2,15 +2,21 @@
   "$schema": "https://opencode.ai/config.json",
   "instructions": [
     "AGENTS.md",
+    "docs/ai/WORKFLOW_PROFILE.md",
     "docs/ai/PROJECT_CONTEXT.md",
     "docs/ai/BOOTSTRAP_DIGEST.md",
     "docs/ai/WORKING_WITH_AI.md",
-    "docs/ai/templates/DOC_GOVERNANCE.md"
+    "docs/ai/templates/DOC_GOVERNANCE.md",
+    "docs/ai/templates/WORKFLOW_PRESETS.md"
   ],
   "command": {
     "bootstrap": {
-      "template": "Read docs/ai/PROJECT_CONTEXT.md, docs/ai/PROGRESS_LOG.md, and docs/ai/ACTIVE_WORK.md. Summarize current state and propose next step with verification command.",
+      "template": "Read docs/ai/WORKFLOW_PROFILE.md, docs/ai/PROJECT_CONTEXT.md, docs/ai/PROGRESS_LOG.md, and docs/ai/ACTIVE_WORK.md. If profile is unconfigured, ask the meta-question once. Otherwise summarize posture + current state and propose next step with verification command.",
       "description": "Session start: recover context"
+    },
+    "reconfigure-workflow": {
+      "template": "Re-run the workflow profile flow using docs/ai/templates/WORKFLOW_PRESETS.md. Ask the meta-question, apply preset or custom dimensions, update docs/ai/WORKFLOW_PROFILE.md, and summarize what changed.",
+      "description": "Reconfigure collaboration posture"
     },
     "handoff": {
       "template": "Append today's work to docs/ai/PROGRESS_LOG.md using the progress log entry template. Create a session note. Mark incomplete slices as Blocked/Deferred with reason. Provide the first concrete action for the next session.",

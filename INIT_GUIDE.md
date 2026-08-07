@@ -2,6 +2,19 @@
 
 Use this guide to adapt this template to any new repository.
 
+## 0) Workflow profile (do this first)
+
+This template ships recommended collaboration presets.
+
+1. Open / create `docs/ai/WORKFLOW_PROFILE.md`.
+2. If `status` is `unconfigured`, the agent must ask the **meta-question** once:
+   - **configure now** — pick a preset from `docs/ai/templates/WORKFLOW_PRESETS.md` (or customize dimensions)
+   - **skip** — apply `serious-engineering` defaults
+   - **later** — mark `deferred` and stop asking until `reconfigure workflow`
+3. Persist the result in `WORKFLOW_PROFILE.md` and summarize effective behavior.
+
+Why this matters: presets control strictness, ask-vs-act autonomy, agent role, docs language, and verification bar for later sessions.
+
 ## 1) Choose agent adapters
 
 Keep only the adapter files for agents you use:
@@ -24,12 +37,13 @@ Edit:
 - `docs/ai/PROJECT_CONTEXT.md`
 - `docs/ai/BOOTSTRAP_DIGEST.md`
 - `docs/ai/WORKING_WITH_AI.md`
+- `docs/ai/WORKFLOW_PROFILE.md` (if not completed in step 0)
 
 Required customization:
 - project mission
 - architecture summary
 - verify/test commands
-- owner and collaboration language preferences
+- owner and collaboration language preferences (or inherit from profile `docs_language`)
 
 ## 3) Define domain vocabulary
 
@@ -41,10 +55,12 @@ Then register your first feature in `docs/ai/FEATURE_REGISTRY.md`.
 
 ## 4) Pick documentation topology
 
+Prefer the value already stored in `WORKFLOW_PROFILE.md`:
+
 - **Single-track mode:** one docs system for product + implementation
 - **Dual-track mode:** product truth in another doc tree, implementation workflow in `docs/ai/`
 
-If dual-track, record the product-truth path in `PROJECT_CONTEXT.md` and repeat it in `WORKING_WITH_AI.md`.
+If dual-track, record the product-truth path in both `PROJECT_CONTEXT.md` and `WORKFLOW_PROFILE.md`.
 
 ## 5) Set planning trust defaults
 
@@ -59,15 +75,16 @@ Mark old plans and snapshots as reference-only.
 
 ## 6) Enable/disable optional discipline
 
-- Keep `.cursor/rules/implementation-discipline.mdc` (or the corresponding section in `AGENTS.md`) only if the repo benefits from stricter cleanup/refactor rules.
-- Remove or adjust any rule that conflicts with your team process.
+- `implementation_discipline` in profile controls whether cleanup/reuse rules are enforced.
+- For Cursor: keep `.cursor/rules/implementation-discipline.mdc` aligned with profile (`on`/`off`).
+- For other adapters: follow the corresponding section in `AGENTS.md` / profile Effective behavior.
 
 ## 7) First bootstrap check
 
 Run a dry bootstrap prompt:
 
 ```text
-Read docs/ai/PROJECT_CONTEXT.md, ACTIVE_WORK.md, FEATURE_REGISTRY.md, TECH_DEBT.md, and recent PROGRESS_LOG.md. Summarize current state and propose one next step with verification command.
+Read docs/ai/WORKFLOW_PROFILE.md, PROJECT_CONTEXT.md, ACTIVE_WORK.md, FEATURE_REGISTRY.md, TECH_DEBT.md, and recent PROGRESS_LOG.md. If profile is unconfigured, ask the meta-question. Otherwise summarize current posture and propose one next step with verification command.
 ```
 
 If the answer references stale roadmap docs as backlog, refine your trust-tier rule and README guidance.
@@ -77,6 +94,10 @@ If the answer references stale roadmap docs as backlog, refine your trust-tier r
 1. Register Feature
 2. Design/Plan
 3. Implement by slices
-4. Verify
+4. Verify (per profile `verification_bar`)
 5. Update progress and registry
 6. Prepare commit (draft first, execute only with explicit approval)
+
+## Reconfigure later
+
+Say `reconfigure workflow` to re-run the meta-question and update `WORKFLOW_PROFILE.md`.

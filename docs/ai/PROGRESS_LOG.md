@@ -2,17 +2,22 @@
 
 Append-only chronological project record.
 
-## YYYY-MM-DD
+## 2026-08-07
 
-- Scope: `<FeatureID>/<SliceID>`
+- Scope: `TMPL-F02` / `TMPL-F02-S01..S03`
 - Completed:
-  - `<what was implemented or documented>`
+  - Added `docs/ai/WORKFLOW_PROFILE.md` with status machine (`unconfigured` / `configured` / `deferred` / `default-applied`)
+  - Added `docs/ai/templates/WORKFLOW_PRESETS.md` (meta-question, 4 presets, dimension→effect map, apply algorithm)
+  - Wrote design + implementation docs under `docs/ai/TMPL/`
+  - Wired README, INIT_GUIDE, BOOTSTRAP_DIGEST, WORKING_WITH_AI, DOC_GOVERNANCE, docs index
+  - Wired adapters: AGENTS.md, CLAUDE.md, Cursor rules, opencode bootstrap skill + `opencode.json`, Cline/Windsurf/Copilot
 - Verification:
-  - `<commands run and result>`
+  - Doc review of preset mapping and adapter read-order consistency
+  - Confirmed profile gate appears in bootstrap paths
 - Docs updated:
-  - `<files updated>`
+  - `FEATURE_REGISTRY.md`, `ACTIVE_WORK.md`, `PROGRESS_LOG.md`, design/plan acceptance
 - Next action:
-  - `<first concrete step for next session>`
+  - Prepare commit for TMPL-F02 when user requests
 
 ## 2026-07-23
 

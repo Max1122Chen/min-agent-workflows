@@ -15,12 +15,28 @@ Portable workflow template for agent-assisted software development.
 ## Doc Layout
 
 - `docs/ai/PROJECT_CONTEXT.md` - stable project snapshot
+- `docs/ai/WORKFLOW_PROFILE.md` - deploy-time collaboration posture (presets)
 - `docs/ai/BOOTSTRAP_DIGEST.md` - short session recovery
 - `docs/ai/ACTIVE_WORK.md` - active queue
 - `docs/ai/FEATURE_REGISTRY.md` - feature registration
 - `docs/ai/PROGRESS_LOG.md` - append-only factual history
 - `docs/ai/TECH_DEBT.md` - explicit debt
 - `docs/ai/templates/` - reusable doc templates
+- `docs/ai/templates/WORKFLOW_PRESETS.md` - preset catalog and option→effect map
+
+## Workflow Profile Gate
+
+On bootstrap / first substantial work:
+
+1. Read `docs/ai/WORKFLOW_PROFILE.md`.
+2. If `status` is `unconfigured`, ask the meta-question **once**:
+   - configure now / skip (`serious-engineering` defaults) / later (`deferred`)
+3. If user configures, prefer named presets in `WORKFLOW_PRESETS.md`; allow dimension overrides.
+4. Write results back to `WORKFLOW_PROFILE.md` and summarize Effective behavior.
+5. Do not re-ask when status is `configured`, `default-applied`, or `deferred` (unless user says `reconfigure workflow`).
+
+Profile may tune strictness, autonomy, role, language, topology, verification bar, and implementation discipline.  
+Profile must **not** disable: commit preparation gate, planning trust tiers, or Draft≠large-coding.
 
 ## Naming Guidance
 
@@ -50,6 +66,7 @@ Portable workflow template for agent-assisted software development.
 ### Context recovery
 
 When context may be stale, re-bootstrap from:
+- `docs/ai/WORKFLOW_PROFILE.md`
 - `docs/ai/BOOTSTRAP_DIGEST.md`
 - `docs/ai/PROJECT_CONTEXT.md`
 - `docs/ai/ACTIVE_WORK.md`
@@ -92,8 +109,14 @@ When user intent implies one of these, recommend the corresponding workflow befo
   - complete DoD checks, then propose "prepare commit"
 - Commit preparation request:
   - draft commit message and wait for explicit execute instruction
+- Workflow profile missing / `unconfigured`:
+  - ask meta-question once per `docs/ai/templates/WORKFLOW_PRESETS.md`
+- User says `reconfigure workflow`:
+  - re-run profile flow and update `WORKFLOW_PROFILE.md`
 
-## Implementation Discipline (optional, enable for engineering-heavy repos)
+## Implementation Discipline (optional; follow profile)
+
+If `WORKFLOW_PROFILE.md` has `implementation_discipline: on` (or preset implies it):
 
 ### Principles
 
@@ -106,6 +129,8 @@ When user intent implies one of these, recommend the corresponding workflow befo
 
 - In scope: cleanup directly touched by the current task.
 - Out of scope: unrelated large rewrites; register debt instead.
+
+If profile sets `implementation_discipline: off`, do not force cleanup beyond task needs; still avoid silently growing unbounded dual paths without debt.
 
 ## Operating Loop
 

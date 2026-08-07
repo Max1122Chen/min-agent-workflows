@@ -12,4 +12,5 @@ Human-maintained short backlog (recommended: 1-5 active items).
 
 | Priority | Feature ID | Slice ID | Status | Owner | Next action |
 |----------|------------|----------|--------|-------|-------------|
-| P0 | `TMPL-F01` | `TMPL-F01-S01` | Done | Max | Commit and push |
+| — | `TMPL-F02` | `TMPL-F02-S01..S03` | Done | Max | Prepare commit when ready |
+| — | `TMPL-F01` | `TMPL-F01-S01` | Done | Max | — |

@@ -45,6 +45,7 @@ Design, Roadmap, Implementation, and ADR files should include:
 ## 5) Agent doc trust
 
 Planning sources:
+- `WORKFLOW_PROFILE.md` (for posture; not backlog)
 - `ACTIVE_WORK.md`
 - `FEATURE_REGISTRY.md` (In Progress / Planned)
 - `TECH_DEBT.md` (Open)
@@ -57,6 +58,13 @@ Reference-only sources:
 - stale checklist fragments
 
 If docs conflict with code/tests, code/tests win.
+
+## 5.1) Workflow profile
+
+- Deploy-time posture lives in `docs/ai/WORKFLOW_PROFILE.md`.
+- Preset catalog: `templates/WORKFLOW_PRESETS.md`.
+- If profile status is `unconfigured`, ask meta-question once before large work.
+- Profile may tune strictness/autonomy/role/language/verification; it cannot disable commit gate or planning trust tiers.
 
 ## 6) Slice Done Definition (DoD)
 

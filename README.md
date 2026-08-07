@@ -35,7 +35,8 @@ You can use the core alone with any agent, or keep the agent-specific adapters y
 
 ```text
 docs/ai/                 Collaboration truth and workflow records (agent-agnostic)
-docs/ai/templates/       Design, plan, ADR, bug, session templates
+docs/ai/WORKFLOW_PROFILE.md   Deploy-time posture (presets / autonomy / role)
+docs/ai/templates/       Design, plan, ADR, bug, session, preset templates
 AGENTS.md                opencode rules
 opencode.json            opencode project config
 .opencode/skills/        opencode reusable skills
@@ -50,10 +51,18 @@ INIT_GUIDE.md            How to initialize this template in a new repo
 ## Quick start
 
 1. Read [`INIT_GUIDE.md`](INIT_GUIDE.md).
-2. Fill project metadata in [`docs/ai/PROJECT_CONTEXT.md`](docs/ai/PROJECT_CONTEXT.md).
-3. Define domain codes and verification commands.
-4. Choose single-track or dual-track documentation mode.
+2. **Configure workflow profile** (or skip to defaults): see [`docs/ai/WORKFLOW_PROFILE.md`](docs/ai/WORKFLOW_PROFILE.md) and [`docs/ai/templates/WORKFLOW_PRESETS.md`](docs/ai/templates/WORKFLOW_PRESETS.md).
+3. Fill project metadata in [`docs/ai/PROJECT_CONTEXT.md`](docs/ai/PROJECT_CONTEXT.md).
+4. Define domain codes and verification commands.
 5. Keep or remove adapter layers based on which agents you use.
+
+### First-deploy meta-question (for agents)
+
+If `docs/ai/WORKFLOW_PROFILE.md` status is `unconfigured`, ask once:
+
+> This template includes recommended workflow presets (strictness, autonomy, agent role, docs language). Configure now, skip to `serious-engineering` defaults, or defer until later?
+
+Do not force a long questionnaire unless the user chooses **configure now**.
 
 ## Core operating loop
 

@@ -1,16 +1,24 @@
 # Bootstrap Digest
 
-Last updated: YYYY-MM-DD
+Last updated: 2026-08-07
 Purpose: recover collaboration context in under 2 minutes.
 
 ## Read order for a new session
 
-1. `PROJECT_CONTEXT.md`
-2. `PROGRESS_LOG.md` (recent entries only)
-3. `ACTIVE_WORK.md`
-4. `FEATURE_REGISTRY.md` (In Progress / Planned)
-5. `TECH_DEBT.md` (Open)
-6. Task-specific design doc (if linked by ACTIVE_WORK or explicitly named by user)
+1. `WORKFLOW_PROFILE.md` — collaboration posture (if `unconfigured`, ask meta-question once)
+2. `PROJECT_CONTEXT.md`
+3. `PROGRESS_LOG.md` (recent entries only)
+4. `ACTIVE_WORK.md`
+5. `FEATURE_REGISTRY.md` (In Progress / Planned)
+6. `TECH_DEBT.md` (Open)
+7. Task-specific design doc (if linked by ACTIVE_WORK or explicitly named by user)
+
+## Workflow profile gate
+
+- Catalog: `templates/WORKFLOW_PRESETS.md`
+- If status `unconfigured`: ask configure now / skip / later (once)
+- If status `deferred`: do not re-ask unless user says `reconfigure workflow`
+- If status `configured` or `default-applied`: follow Effective behavior
 
 ## Non-negotiable collaboration rules
 
@@ -19,6 +27,7 @@ Purpose: recover collaboration context in under 2 minutes.
 - A `Draft` design does not authorize large-scale coding.
 - End of meaningful batch: update docs and propose "prepare commit" before unrelated next work.
 - Prepare commit is draft-and-review only; execute commit only with explicit user instruction.
+- Profile may tune strictness/autonomy/role/language; it cannot disable the rules above.
 
 ## ID scheme
 
@@ -31,6 +40,7 @@ Purpose: recover collaboration context in under 2 minutes.
 
 - Verify command: `<replace-with-verify-command>`
 - Smoke test command: `<replace-with-smoke-test-command>`
+- Enforce bar from profile `verification_bar`
 
 ## Handoff trigger cues
 
