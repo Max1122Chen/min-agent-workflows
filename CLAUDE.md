@@ -30,6 +30,7 @@ User phrase `reconfigure workflow` re-runs the profile flow.
 - Slice: `<FeatureID>-S<nn>`
 - Bug: `BUG-<DOMAIN>-<nnn>`
 - ADR: `ADR-<yyyyMMdd>-<nn>`
+- Design/Implementation files: `docs/ai/<DOMAIN>/<FEATURE_ID>_<SLUG>_DESIGN.md` (ALL CAPS; also `_IMPLEMENTATION` / `_ROADMAP` / `_REFACTOR_PLAN`)
 
 ## Session End
 

@@ -1,4 +1,7 @@
-# <FeatureOrTopic> Design Spec
+# <FEATURE_ID>_<SLUG> Design Spec
+
+> **Filename (required):** `docs/ai/<DOMAIN>/<FEATURE_ID>_<SLUG>_DESIGN.md` — ALL CAPS.
+> Example: `docs/ai/CORE/CORE-F01_EVENT_BUS_DESIGN.md`
 
 ## Meta
 - **ID:** `<DOMAIN>-F<nn>`

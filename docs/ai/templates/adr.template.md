@@ -1,11 +1,13 @@
-# ADR-<yyyyMMdd>-<nn> <decision-title>
+# ADR-<yyyyMMdd>-<nn> <DECISION_TITLE>
+
+> **Filename (required):** `docs/ai/<DOMAIN>/ADR-<yyyyMMdd>-<nn>_<SLUG>.md` — ALL CAPS.
 
 ## Meta
 - **ID:** `ADR-<yyyyMMdd>-<nn>`
 - **Status:** `Draft | Accepted | Superseded`
 - **Owner:** `<name>`
 - **Last updated:** `YYYY-MM-DD`
-- **Related:** `[Design Spec](./<design>.md)`
+- **Related:** `[Design Spec](./<FEATURE_ID>_<SLUG>_DESIGN.md)`
 
 ## Context
 

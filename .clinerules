@@ -41,3 +41,4 @@ Preset catalog: `docs/ai/templates/WORKFLOW_PRESETS.md`.
 | Slice | `<FeatureID>-S<nn>` | `CORE-F01-S01` |
 | Bug | `BUG-<DOMAIN>-<nnn>` | `BUG-CORE-001` |
 | ADR | `ADR-<yyyyMMdd>-<nn>` | `ADR-20260723-01` |
+| Design/Impl file | `docs/ai/<DOMAIN>/<FEATURE_ID>_<SLUG>_DESIGN.md` (ALL CAPS) | `docs/ai/TMPL/TMPL-F03_DOC_NAMING_AND_BUCKETING_DESIGN.md` |

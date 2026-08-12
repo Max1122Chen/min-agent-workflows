@@ -10,8 +10,11 @@ description: Register a new Feature ID before implementation work. Follow the ID
 1. **Check existing registry** — read `docs/ai/FEATURE_REGISTRY.md` for the next available number in the target domain
 2. **Assign Feature ID** — `<DOMAIN>-F<nn>` (e.g. `CORE-F01`, `API-F02`)
 3. **Register in FEATURE_REGISTRY.md** — add row with Feature ID, Title, Domain, Status (Draft), Design Doc link (TBD), Owner
-4. **Create Design Spec** — use `docs/ai/templates/design-spec.template.md`
-5. **When ready for implementation** — create Implementation Plan using `docs/ai/templates/implementation-plan.template.md` with slice breakdown
+4. **Create Design Spec** — copy `docs/ai/templates/design-spec.template.md` to:
+   `docs/ai/<DOMAIN>/<FEATURE_ID>_<SLUG>_DESIGN.md` (ALL CAPS filename; domain bucket required)
+5. **When ready for implementation** — create:
+   `docs/ai/<DOMAIN>/<FEATURE_ID>_<SLUG>_IMPLEMENTATION.md` with slice breakdown
+   (same ALL-CAPS + domain-bucket rules)
 
 ## Slice IDs
 

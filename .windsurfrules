@@ -32,3 +32,4 @@ REFERENCE ONLY (do not create backlog from):
 - Slice: `<FeatureID>-S<nn>` → `CORE-F01-S01`
 - Bug: `BUG-<DOMAIN>-<nnn>` → `BUG-CORE-001`
 - ADR: `ADR-<yyyyMMdd>-<nn>` → `ADR-20260723-01`
+- Design/Impl: ALL CAPS under `docs/ai/<DOMAIN>/` → `TMPL-F03_DOC_NAMING_AND_BUCKETING_DESIGN.md`

@@ -31,3 +31,9 @@ Rules for trust tiers and exceptions:
 ## Templates
 
 See `templates/` for Design, Implementation Plan, ADR, Bug Record, Session Note, and Workflow Preset templates.
+
+## Domain buckets and naming
+
+- Long design/implementation docs live under `docs/ai/<DOMAIN>/` (not root).
+- Filename pattern (ALL CAPS): `<FEATURE_ID>_<SLUG>_DESIGN.md` (also `_IMPLEMENTATION` / `_ROADMAP` / `_REFACTOR_PLAN`).
+- Full rules: `templates/DOC_GOVERNANCE.md` §3.1–3.2.

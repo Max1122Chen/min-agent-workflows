@@ -35,6 +35,7 @@ Purpose: recover collaboration context in under 2 minutes.
 - Slice: `<FeatureID>-S<nn>`
 - Bug: `BUG-<DOMAIN>-<nnn>`
 - ADR: `ADR-<yyyyMMdd>-<nn>`
+- Design/Implementation docs: ALL CAPS under `docs/ai/<DOMAIN>/` as `<FEATURE_ID>_<SLUG>_DESIGN.md` (or `_IMPLEMENTATION` / `_ROADMAP` / `_REFACTOR_PLAN`)
 
 ## Verification baseline
 

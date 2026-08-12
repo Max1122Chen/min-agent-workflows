@@ -49,9 +49,17 @@ Required customization:
 
 In your governance docs, define domain codes used by IDs:
 - examples: `CORE`, `API`, `UI`, `DATA`, `TEST`, `INFRA`
-- keep them short and stable
+- keep them short, stable, and **ALL CAPS**
 
 Then register your first feature in `docs/ai/FEATURE_REGISTRY.md`.
+
+Create the domain bucket for new design docs:
+
+```text
+docs/ai/<DOMAIN>/<FEATURE_ID>_<SLUG>_DESIGN.md
+```
+
+Filenames are ALL CAPS and must include the Feature ID.
 
 ## 4) Pick documentation topology
 

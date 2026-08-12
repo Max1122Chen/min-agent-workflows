@@ -1,4 +1,6 @@
-# BUG-<DOMAIN>-<nnn> <bug-title>
+# BUG-<DOMAIN>-<nnn> <BUG_TITLE>
+
+> **Filename (required):** `docs/ai/bugs/BUG-<DOMAIN>-<nnn>_<SLUG>.md` or `docs/ai/<DOMAIN>/bugs/BUG-<DOMAIN>-<nnn>_<SLUG>.md` — ALL CAPS.
 
 ## Meta
 - **ID:** `BUG-<DOMAIN>-<nnn>`

@@ -1,4 +1,7 @@
-# <DomainOrProject> Roadmap
+# <DOMAIN>_<SLUG> Roadmap
+
+> **Filename (required):** `docs/ai/<DOMAIN>/<FEATURE_ID_OR_DOMAIN>_<SLUG>_ROADMAP.md` — ALL CAPS.
+> Prefer Feature-linked roadmaps when scoped to one Feature; otherwise use domain-level ALL-CAPS name under the domain bucket.
 
 ## Meta
 - **ID:** `N/A`

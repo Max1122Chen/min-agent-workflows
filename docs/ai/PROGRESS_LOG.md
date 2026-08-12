@@ -2,6 +2,22 @@
 
 Append-only chronological project record.
 
+## 2026-08-12
+
+- Scope: `TMPL-F03` / `TMPL-F03-S01`
+- Completed:
+  - Tightened doc naming: ALL-CAPS `<FEATURE_ID>_<SLUG>_<DOC_TYPE>.md`
+  - Required domain bucketing for design/impl/roadmap/ADR under `docs/ai/<DOMAIN>/`
+  - Updated `DOC_GOVERNANCE`, `docs-ai-layout`, adapters, templates, INIT_GUIDE, docs index
+  - Added `docs/ai/TMPL/TMPL-F03_DOC_NAMING_AND_BUCKETING_DESIGN.md`
+- Verification:
+  - Existing TMPL-F02 docs already matched the pattern
+  - New TMPL-F03 design path/name complies
+- Docs updated:
+  - `FEATURE_REGISTRY.md`, `ACTIVE_WORK.md`, `PROGRESS_LOG.md`
+- Next action:
+  - Prepare commit when user requests
+
 ## 2026-08-07
 
 - Scope: `TMPL-F02` / `TMPL-F02-S01..S03`

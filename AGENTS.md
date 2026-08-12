@@ -44,6 +44,8 @@ Profile must **not** disable: commit preparation gate, planning trust tiers, or 
 - Slice IDs: `<FeatureID>-S<nn>`
 - Bug IDs: `BUG-<DOMAIN>-<nnn>`
 - ADR IDs: `ADR-<yyyyMMdd>-<nn>`
+- Long docs (ALL CAPS): `docs/ai/<DOMAIN>/<FEATURE_ID>_<SLUG>_<DOC_TYPE>.md`
+  - `<DOC_TYPE>`: `DESIGN` | `IMPLEMENTATION` | `ROADMAP` | `REFACTOR_PLAN`
 
 ## Hard Constraints
 
@@ -143,6 +145,8 @@ If profile sets `implementation_discipline: off`, do not force cleanup beyond ta
 
 ## Placement Rules
 
-- New design and implementation docs belong under `docs/ai/` or domain subfolders inside it.
+- Design / Implementation / Roadmap / Refactor Plan / ADR docs **must** live under `docs/ai/<DOMAIN>/`.
+- Do **not** place those long docs in `docs/ai/` root (root is for core collaboration truth only).
 - Template examples belong only under `docs/ai/templates/`.
 - Session notes should be stored in `docs/ai/sessions/` when used.
+- Filenames for Feature-linked long docs are ALL CAPS and include the Feature ID.
