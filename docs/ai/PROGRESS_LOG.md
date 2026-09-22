@@ -2,6 +2,24 @@
 
 Append-only chronological project record.
 
+## 2026-09-22
+
+- Scope: `TMPL-F04` / `TMPL-F04-S01..S03`
+- Completed:
+  - Added `.opencode/skills/engineering-design` and `design-review` (domain-neutral)
+  - Enhanced design-spec + implementation-plan templates (requirements vs solutions, readiness, design traceability)
+  - Added DOC_GOVERNANCE complexity levels (L0–L3) and implementation readiness gate
+  - Wired AGENTS/CLAUDE/Cursor triggers/adapters/presets/DoD/feature-registration/opencode commands
+  - Updated README/INIT/BOOTSTRAP/WORKING_WITH_AI for design loop
+- Verification:
+  - Doc cross-link review
+  - Domain-neutrality scan on new core skills/templates (no engine-specific vocabulary in core rules)
+  - Acceptance questions from enhancement brief covered by governance + skills
+- Docs updated:
+  - `FEATURE_REGISTRY.md`, `ACTIVE_WORK.md`, `PROGRESS_LOG.md`, TMPL-F04 design/plan
+- Next action:
+  - Push branch and open PR `feat/engineering-design-workflow`
+
 ## 2026-08-12
 
 - Scope: `TMPL-F03` / `TMPL-F03-S01`

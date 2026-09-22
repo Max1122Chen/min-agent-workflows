@@ -37,3 +37,5 @@ See `templates/` for Design, Implementation Plan, ADR, Bug Record, Session Note,
 - Long design/implementation docs live under `docs/ai/<DOMAIN>/` (not root).
 - Filename pattern (ALL CAPS): `<FEATURE_ID>_<SLUG>_DESIGN.md` (also `_IMPLEMENTATION` / `_ROADMAP` / `_REFACTOR_PLAN`).
 - Full rules: `templates/DOC_GOVERNANCE.md` §3.1–3.2.
+- Design complexity + readiness: `templates/DOC_GOVERNANCE.md` §5.2–5.3.
+- Skills: `.opencode/skills/engineering-design/`, `.opencode/skills/design-review/`.

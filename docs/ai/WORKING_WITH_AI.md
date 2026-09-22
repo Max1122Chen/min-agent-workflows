@@ -1,6 +1,6 @@
 # Working With AI
 
-Last updated: 2026-08-07
+Last updated: 2026-09-22
 
 ## First deploy / unconfigured profile
 
@@ -35,9 +35,22 @@ Please append today's work to docs/ai/PROGRESS_LOG.md and provide the first acti
 reconfigure workflow
 ```
 
+## Design / review prompts
+
+```text
+Assess complexity (L0–L3). If L2+, run engineering-design then design-review before coding.
+```
+
+```text
+Review this Design Spec for implementation readiness. Do not start large implementation if Not ready.
+```
+
 ## Workflow habits
 
 - For substantial new work: register Feature ID before large code edits.
+- Assess complexity; keep L0 trivial work lightweight.
+- For L2+/L3: Design Spec → Design Review → readiness → Implementation Plan with design traceability.
+- Separate requirements from proposed solutions; inspect existing architecture first.
 - For architecture or scope decisions: create/update a Design Spec and, if needed, an ADR.
 - For cross-module defects found during another task: file a bug record before broad drive-by fixes.
 - For handoff: create a session note, update progress log, and mark incomplete slice status clearly.

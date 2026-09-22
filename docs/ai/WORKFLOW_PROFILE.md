@@ -46,6 +46,7 @@ Fill after configure/skip. Keep short and actionable.
 - Prepare commit ≠ execute commit
 - Plan only from trusted sources (`ACTIVE_WORK`, registry In Progress/Planned, open TECH_DEBT, recent progress, code/tests)
 - `Draft` design does not authorize large-scale coding
+- Level-3 architectural safety checks (ownership/contracts/migration/failure when relevant) cannot be skipped by preset
 
 ## Reconfigure
 

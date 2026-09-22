@@ -99,8 +99,8 @@ If the answer references stale roadmap docs as backlog, refine your trust-tier r
 
 ## 8) Minimum operating loop
 
-1. Register Feature
-2. Design/Plan
+1. Assess complexity (L0–L3); register Feature when substantial
+2. Design / Design Review / Readiness (per level) + Plan
 3. Implement by slices
 4. Verify (per profile `verification_bar`)
 5. Update progress and registry

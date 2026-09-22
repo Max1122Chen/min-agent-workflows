@@ -10,11 +10,16 @@ When user intent implies one of these, recommend the corresponding workflow befo
 - Plan/roadmap/priorities:
   - check `ACTIVE_WORK.md`, `FEATURE_REGISTRY.md`, and trusted sources
 - New feature/refactor:
-  - register Feature ID, create or update Design Spec, then Implementation Plan
+  - assess complexity L0–L3; register Feature ID when substantial
+  - L2+: Design (`engineering-design`) → Design Review → readiness → Implementation Plan
+  - L3: readiness gate mandatory before large coding
 - Significant unknown scope:
   - perform a brief pre-flight (dependencies, risks, debt, verification path) — required when profile says so
+  - discover existing architecture before inventing structure
 - Bug/regression:
   - create/update bug record with reproduction and regression checks
+- Design review / implementation readiness:
+  - use `design-review`; record verdict; do not large-code on `Not ready` / `Draft`
 - Handoff/session switch:
   - session note + progress entry + blocked/deferred status for incomplete slices
 - End of meaningful batch:

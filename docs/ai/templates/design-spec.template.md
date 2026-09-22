@@ -2,10 +2,15 @@
 
 > **Filename (required):** `docs/ai/<DOMAIN>/<FEATURE_ID>_<SLUG>_DESIGN.md` — ALL CAPS.
 > Example: `docs/ai/CORE/CORE-F01_EVENT_BUS_DESIGN.md`
+>
+> Fill only relevant sections. If a section does not apply, write `Not applicable because ...`.
+> Behavior guide: `.opencode/skills/engineering-design/SKILL.md`
+> Review guide: `.opencode/skills/design-review/SKILL.md`
 
 ## Meta
 - **ID:** `<DOMAIN>-F<nn>`
 - **Type:** `Feature | Refactor`
+- **Complexity:** `L0 | L1 | L2 | L3`
 - **Status:** `Draft | Planned | In Progress | Review | Done | Blocked | Deferred | Cancelled | Snapshot | Archived | Reference`
 - **Owner:** `<name>`
 - **Last updated:** `YYYY-MM-DD`
@@ -13,49 +18,155 @@
 
 ## TL;DR
 
-3-5 lines describing the problem, intended solution, and current status.
+3-5 lines: problem, proposed approach, current status.
 
-## Scope
+## Problem
 
-- **In:**
-  - `<in-scope item>`
-- **Out:**
-  - `<out-of-scope item>`
+What is wrong or missing today?
 
-## Context and problem
+## Requirements
 
-- Current behavior:
-- Target behavior:
-- Gap:
+- `<must-have>`
 
-## Design
+## Constraints
+
+- `<hard limit>`
+
+## Preferences
+
+- `<soft preference>`
+
+## Assumptions
+
+- `<unverified belief>`
+
+## Non-Goals
+
+- `<explicitly out of scope>`
+
+## Current Architecture
+
+What exists today that this change must respect or extend?
+(modules, APIs, data/control flow, constraints)
+
+## Proposed Architecture
+
+Describe the intended structure and how it fits the current system.
+Use domain-neutral terms (`OrderService`, `Cache`, `EventBus`, …) unless the project domain requires otherwise.
+
+## Responsibilities
+
+| Unit | Responsible for | Not responsible for |
+|------|-----------------|---------------------|
+| `<module/type>` | `<...>` | `<...>` |
+
+## Boundaries
+
+- Allowed interactions:
+- Forbidden interactions / dependency rules:
+
+## Dependencies
+
+- Depends on:
+- Depended on by:
+- New dependency direction justified because:
+
+## Ownership & Lifetime
+
+- Who owns key state?
+- Who creates / destroys / invalidates?
+- Sharing / reference semantics:
+- `Not applicable because ...` if irrelevant
+
+## Data Flow
+
+`Input → Processing → Storage → Output` (adapt as needed)
+
+## Control Flow
+
+Who calls whom? Note async/events/callbacks/messages explicitly.
+
+## State & Invariants
+
+- States / transitions:
+- Illegal combinations:
+- Invariants and who maintains them:
+- `Not applicable because ...` if irrelevant
+
+## API / Interface Semantics
+
+For each important API:
+- Responsibility:
+- Inputs / outputs:
+- Ownership / mutation:
+- Errors:
+- Sync/async:
+- Thread-safety (if relevant):
+
+## Failure Model
+
+Relevant failure modes and expected behavior (only those that matter here).
+
+## Alternatives & Trade-offs
 
 ### Option A (recommended)
 
-- Description:
-- Benefits:
-- Risks:
+- Summary:
+- Pros:
+- Cons:
 
 ### Option B
 
-- Description:
+- Summary:
 - Why not selected:
 
-## Implementation notes
+## Integration Impact
 
-- Key modules impacted:
-- Migration/deletion plan for old paths:
-- Compatibility assumptions:
+Impact on existing modules, callers, data, and ops.
 
-## Verification
+## Migration / Compatibility
 
-- Build/verify command:
-- Test command(s):
-- Manual checks:
+- Compatibility promises:
+- Migration / rollout:
+- Transitional code and exit condition:
 
-## Acceptance checklist
+## Verification Strategy
 
-- [ ] Scope implemented
-- [ ] Verification passed
-- [ ] Progress log updated
+- Core behavior checks:
+- Failure-path checks (if relevant):
+- Integration / compatibility / performance (if relevant):
+
+## Open Questions
+
+- `<question>` — blocking? yes/no
+
+## Design Review
+
+- **Verdict:** `Pending | Ready | Ready with deferred items | Not ready`
+- **Reviewer / date:**
+- **Link or summary:**
+
+## Implementation Readiness
+
+- [ ] Requirements understood
+- [ ] Constraints identified
+- [ ] Relevant existing architecture inspected
+- [ ] Responsibilities and boundaries defined
+- [ ] Key dependencies understood
+- [ ] Ownership/lifetime resolved or N/A
+- [ ] Major state/invariants resolved or N/A
+- [ ] API semantics sufficiently defined
+- [ ] Important failure modes considered
+- [ ] Alternatives considered where meaningful
+- [ ] Integration impact understood
+- [ ] Verification strategy exists
+- [ ] Unresolved questions resolved or explicitly deferred/accepted
+
+**Ready for implementation?** `yes | no` — if no, list blockers.
+
+## Acceptance Checklist
+
+- [ ] Design review complete when required by complexity/profile
+- [ ] Implementation plan traces to design decisions (L2+)
+- [ ] Progress log updated when status changes
 - [ ] Feature registry status synced

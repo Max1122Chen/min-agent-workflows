@@ -66,12 +66,13 @@ Do not force a long questionnaire unless the user chooses **configure now**.
 
 ## Core operating loop
 
-1. Register a Feature ID
-2. Write Design / Implementation Plan
-3. Implement by slices
-4. Verify
-5. Update progress + registry
-6. Prepare commit, then execute only with explicit approval
+1. Assess complexity (L0–L3); register a Feature ID when substantial
+2. Discovery + Design / Design Review / Readiness (per level)
+3. Write Implementation Plan with design traceability (L2+)
+4. Implement by slices
+5. Verify
+6. Update progress + registry
+7. Prepare commit, then execute only with explicit approval
 
 ## Source inspiration
 

@@ -1,6 +1,6 @@
 # Document Governance
 
-Last updated: 2026-08-12
+Last updated: 2026-09-22
 Status: Active
 
 ## 1) Purpose
@@ -120,7 +120,51 @@ If docs conflict with code/tests, code/tests win.
 - Deploy-time posture lives in `docs/ai/WORKFLOW_PROFILE.md`.
 - Preset catalog: `templates/WORKFLOW_PRESETS.md`.
 - If profile status is `unconfigured`, ask meta-question once before large work.
-- Profile may tune strictness/autonomy/role/language/verification; it cannot disable commit gate or planning trust tiers.
+- Profile may tune strictness/autonomy/role/language/verification/design ceremony; it cannot disable commit gate, planning trust tiers, or Level-3 architectural safety checks.
+
+## 5.2) Design complexity levels
+
+Agents must assess complexity before large edits and state the level.
+
+| Level | Typical scope | Required path |
+|-------|---------------|---------------|
+| **L0 Trivial** | typo, obvious one-line fix, local constant | Implement → Verify (no design review) |
+| **L1 Local** | single-module logic | Short design optional; Feature ID if substantial |
+| **L2 Feature** | multi-module, API, state, or lifetime | Design Spec → Design Review → Implementation Plan → Implement |
+| **L3 Architectural** | core abstraction, cross-module deps, persistence, concurrency, public API, migration, major refactor | Full Design → Design Review → **Implementation Readiness** → Plan → Implement |
+
+Skills:
+- Design behavior: `.opencode/skills/engineering-design/SKILL.md`
+- Design review: `.opencode/skills/design-review/SKILL.md`
+
+Target flow (skip stages allowed only by level):
+
+```text
+Request → Discovery → Complexity Assessment
+  → Design → Design Review → Implementation Readiness
+  → Implementation → Verification → Done
+```
+
+Examples:
+- L0: `Request → Implement → Verify`
+- L2: `Request → Discovery → Design → Review → Plan → Implement → Verify`
+- L3: same as L2 with explicit readiness gate before coding
+
+## 5.3) Implementation readiness gate
+
+For L2+ (always for L3), do not start large-scale coding until Design Review verdict is `Ready` or `Ready with deferred items`, and the Design Spec readiness checklist is satisfied:
+
+- requirements understood; constraints identified
+- relevant existing architecture inspected
+- responsibilities and boundaries defined; key dependencies understood
+- ownership/lifetime and major state/invariants resolved **or** marked N/A with reason
+- API semantics sufficiently defined; important failure modes considered
+- alternatives considered where meaningful; integration impact understood
+- verification strategy exists
+- unresolved questions resolved **or** explicitly accepted/deferred
+
+`Draft` design never authorizes large-scale coding.  
+`Not ready` blocks large implementation until gaps are closed.
 
 ## 6) Slice Done Definition (DoD)
 
@@ -128,14 +172,16 @@ If docs conflict with code/tests, code/tests win.
 - Progress entry appended
 - Feature and slice status synchronized
 - Design/Plan updated when scope or status changed
+- For L2+: design review verdict recorded; implementation slices trace to design decisions
 - ADR updated for meaningful architectural trade-off
 - Bug record updated for defect fixes
 - New design/impl docs follow §3.1 naming and §3.2 domain bucketing
 
 ### Engineering DoD
-- Verification command executed and recorded
+- Verification command executed and recorded (per profile `verification_bar`)
 - No unrecorded blocking defect discovered during work
 - Public API changes reflected in callers or explicitly documented
+- Implementation matches reviewed design decisions (or documents approved deviation)
 
 ## 7) Handoff requirements
 

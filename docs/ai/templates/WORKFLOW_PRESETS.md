@@ -36,6 +36,8 @@ Explain purpose in one sentence:
 - Pre-flight: recommended for new modules/refactors
 - Pause for approval on irreversible/destructive ops and broad refactors
 - Keep professional engineering bar even in learning repos
+- Design ceremony: teach during discovery/design; still require Design Review + readiness for L2+/L3
+- Prefer explaining alternatives and overengineering checks explicitly
 
 ### `prototype-partner`
 
@@ -55,6 +57,7 @@ Explain purpose in one sentence:
 - Pre-flight: optional unless refactor/multi-module
 - Challenge lightly when trust tiers are violated
 - Prefer partner tone: propose options, then move
+- Design ceremony: L1 may use short notes; L2 keeps lean Design + Review; L3 still requires readiness (ownership/public contracts/migration cannot be skipped)
 
 ### `serious-engineering` (default on skip)
 
@@ -74,6 +77,7 @@ Explain purpose in one sentence:
 - Pre-flight: required for new Feature/Refactor
 - Dual-path temporary layers must be removed or registered as debt
 - Partner stance with high willingness to push back on scope/quality
+- Design ceremony: L2+ requires Design Spec + Design Review + readiness before large coding; L3 mandatory
 
 ### `executor-tight`
 
@@ -92,6 +96,7 @@ Explain purpose in one sentence:
 - Ask before expanding scope; execute approved slice efficiently
 - High compliance with DoD and verification bar
 - Challenge mainly on process/safety violations, not style preferences
+- Design ceremony: terse reviews allowed, but cannot skip L2+/L3 architectural safety (ownership, contracts, failure, migration)
 
 ## 2) Dimension reference (custom / overrides)
 
@@ -103,8 +108,8 @@ Use when user rejects named presets or wants fine-tuning.
 |-------|-----------------|------------|-------|
 | `learning` | medium-high on foundations | recommended | Teaching allowed; quality bar stays high |
 | `prototype` | low-medium | optional | Speed with accountable slices |
-| `serious-engineering` | high on workflow skips | required for Feature/Refactor | Default professional posture |
-| `commercial` | high on risk/process | required for Feature/Refactor | Prefer compliance over exploration |
+| `serious-engineering` | high on workflow skips | required for Feature/Refactor | Default professional posture; L2+/L3 design+review+readiness |
+| `commercial` | high on risk/process | required for Feature/Refactor | Prefer compliance over exploration; L3 safety non-skippable |
 
 ### `autonomy`
 
@@ -171,3 +176,15 @@ All agent adapters should mention:
 - Read `WORKFLOW_PROFILE.md` during bootstrap
 - Honor meta-question when `unconfigured`
 - Never disable non-negotiable constraints
+- For non-trivial work: complexity assessment + engineering-design / design-review when required by level
+
+## 5) Design ceremony by complexity (summary)
+
+| Level | Minimum expectation |
+|-------|---------------------|
+| L0 | No design review |
+| L1 | Short design optional |
+| L2 | Design + Design Review + Plan before large coding |
+| L3 | Same as L2 + explicit Implementation Readiness gate |
+
+Details: `DOC_GOVERNANCE.md` §5.2–5.3; skills under `.opencode/skills/engineering-design/` and `design-review/`.

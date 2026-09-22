@@ -100,11 +100,15 @@ When user intent implies one of these, recommend the corresponding workflow befo
 - Plan/roadmap/priorities:
   - check `ACTIVE_WORK.md`, `FEATURE_REGISTRY.md`, and trusted sources
 - New feature/refactor:
-  - register Feature ID, create or update Design Spec, then Implementation Plan
+  - assess complexity (L0–L3); register Feature ID when substantial
+  - for L2+: Design Spec (`engineering-design`) → Design Review → readiness → Implementation Plan
+  - for L3: readiness gate is mandatory before large coding
 - Significant unknown scope:
-  - perform a brief pre-flight (dependencies, risks, debt, verification path)
+  - perform a brief pre-flight (dependencies, risks, debt, verification path); run discovery before inventing structure
 - Bug/regression:
-  - create/update bug record with reproduction and regression checks
+  - create/update bug record with reproduction and regression checks; escalate to design flow if fix implies L2+ redesign
+- Design ready / review design:
+  - use `design-review` skill; record verdict on the Design Spec
 - Handoff/session switch:
   - session note + progress entry + blocked/deferred status for incomplete slices
 - End of meaningful batch:
@@ -115,6 +119,22 @@ When user intent implies one of these, recommend the corresponding workflow befo
   - ask meta-question once per `docs/ai/templates/WORKFLOW_PRESETS.md`
 - User says `reconfigure workflow`:
   - re-run profile flow and update `WORKFLOW_PROFILE.md`
+
+## Engineering Design Loop
+
+For non-trivial work, prefer:
+
+```text
+Request → Discovery → Complexity Assessment
+  → Design → Design Review → Implementation Readiness
+  → Implementation → Verification → Done
+```
+
+- L0 may skip design stages.
+- Separate requirements from proposed solutions.
+- Inspect existing architecture before inventing parallel abstractions.
+- Skills: `.opencode/skills/engineering-design/SKILL.md`, `.opencode/skills/design-review/SKILL.md`
+- Process detail: `docs/ai/templates/DOC_GOVERNANCE.md` §5.2–5.3
 
 ## Implementation Discipline (optional; follow profile)
 
@@ -136,12 +156,13 @@ If profile sets `implementation_discipline: off`, do not force cleanup beyond ta
 
 ## Operating Loop
 
-1. Register Feature ID
-2. Write Design / Implementation Plan
-3. Implement by slices
-4. Verify
-5. Update progress + registry
-6. Prepare commit, then execute only with explicit approval
+1. Assess complexity (L0–L3); register Feature ID when substantial
+2. Discovery + Design / Design Review / Readiness (per level)
+3. Implementation Plan with design traceability (L2+)
+4. Implement by slices
+5. Verify
+6. Update progress + registry
+7. Prepare commit, then execute only with explicit approval
 
 ## Placement Rules
 

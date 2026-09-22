@@ -25,7 +25,8 @@ REFERENCE ONLY (do not create backlog from):
 - **Register Feature ID** before implementation (format: `<DOMAIN>-F<nn>`)
 - **Prepare commit = draft only**; execute only on approval
 - **Code/tests > docs** when they conflict
-- **Honor WORKFLOW_PROFILE.md**; profile cannot disable commit gate or trust tiers
+- **Honor WORKFLOW_PROFILE.md**; profile cannot disable commit gate, trust tiers, or L3 architectural safety
+- **L2+ design loop**: engineering-design → design-review → readiness before large coding
 
 ### ID Formats
 - Feature: `<DOMAIN>-F<nn>` → `CORE-F01`

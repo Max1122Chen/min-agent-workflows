@@ -1,6 +1,6 @@
 # Bootstrap Digest
 
-Last updated: 2026-08-07
+Last updated: 2026-09-22
 Purpose: recover collaboration context in under 2 minutes.
 
 ## Read order for a new session
@@ -23,11 +23,18 @@ Purpose: recover collaboration context in under 2 minutes.
 ## Non-negotiable collaboration rules
 
 - Plan from trusted sources only; do not infer backlog from old roadmap snapshots.
-- New Feature/Refactor: register ID, define design/plan, then implement.
-- A `Draft` design does not authorize large-scale coding.
+- New substantial work: assess complexity (L0–L3); register ID; design before large coding when L2+.
+- A `Draft` design or design-review `Not ready` does not authorize large-scale coding.
+- L3 architectural safety checks cannot be skipped by profile preset.
 - End of meaningful batch: update docs and propose "prepare commit" before unrelated next work.
 - Prepare commit is draft-and-review only; execute commit only with explicit user instruction.
 - Profile may tune strictness/autonomy/role/language; it cannot disable the rules above.
+
+## Engineering design (short)
+
+- Skills: `.opencode/skills/engineering-design/`, `.opencode/skills/design-review/`
+- Process: `templates/DOC_GOVERNANCE.md` §5.2–5.3
+- L0 skip design; L2+ Design+Review; L3 + readiness gate
 
 ## ID scheme
 
