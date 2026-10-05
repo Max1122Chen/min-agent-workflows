@@ -19,10 +19,19 @@ User phrase `reconfigure workflow` re-runs the profile flow.
 - "Prepare commit" means draft only. Never run `git commit` without explicit instruction.
 - Plan from trusted sources only: `ACTIVE_WORK.md`, `FEATURE_REGISTRY.md`, `TECH_DEBT.md`, recent `PROGRESS_LOG.md`, code/tests.
 - Old roadmap/snapshot files are reference-only. Do not infer backlog from them.
-- New features: register Feature ID first, then design and implement.
+- New substantial work: assess complexity (L0–L3); register Feature ID; design before large coding when L2+.
+- L2+: Design → Design Review → readiness → Implementation Plan. L3 readiness gate is mandatory.
+- `Draft` / design-review `Not ready` does not authorize large-scale coding.
 - End of meaningful batch: update docs, then propose "prepare commit".
 - Honor `WORKFLOW_PROFILE.md` for strictness, autonomy, role, language, and verification bar.
-- Profile cannot disable the commit gate or planning trust tiers.
+- Profile cannot disable the commit gate, planning trust tiers, or L3 architectural safety checks.
+
+## Engineering Design
+
+- Skills: `.opencode/skills/engineering-design/SKILL.md`, `.opencode/skills/design-review/SKILL.md`
+- Process: `docs/ai/templates/DOC_GOVERNANCE.md` §5.2–5.3
+- Separate requirements from proposed solutions; inspect existing architecture first.
+- Keep workflow domain-neutral.
 
 ## ID Scheme
 

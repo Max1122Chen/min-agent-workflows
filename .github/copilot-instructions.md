@@ -22,6 +22,8 @@ User phrase `reconfigure workflow` re-runs profile setup.
 - New features must be registered in `FEATURE_REGISTRY.md` before implementation.
 - After completing work, update progress log, then propose "prepare commit" as a draft only.
 - Honor `WORKFLOW_PROFILE.md` for strictness/autonomy/role/language; it cannot disable the rules above.
+- For L2+ work: Design Spec → Design Review → implementation readiness before large coding (see `.opencode/skills/engineering-design` and `design-review`).
+- `Draft` design or design-review `Not ready` does not authorize large-scale coding.
 
 ### ID Conventions
 

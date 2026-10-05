@@ -31,7 +31,8 @@ Preset catalog: `docs/ai/templates/WORKFLOW_PRESETS.md`.
 2. **Feature registration**: Register Feature ID in `FEATURE_REGISTRY.md` before large code edits.
 3. **Refactor discipline**: Target clear end state. Register debt for transitional code.
 4. **Doc priority**: If docs conflict with code/tests, code/tests win.
-5. **Profile**: Honor `WORKFLOW_PROFILE.md`; cannot disable commit gate or trust tiers.
+5. **Profile**: Honor `WORKFLOW_PROFILE.md`; cannot disable commit gate, trust tiers, or L3 architectural safety.
+6. **Design loop**: For L2+ use engineering-design → design-review → readiness before large coding.
 
 ## ID Scheme
 
