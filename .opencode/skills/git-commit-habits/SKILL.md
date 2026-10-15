@@ -18,6 +18,7 @@ description: Generate git commit messages using Conventional Commits. Use when t
 - **Never split into multiple commits** unless the user explicitly asks to split — default to one commit per request
 - **Never commit files that likely contain secrets** (`.env`, credentials, keys); warn the user instead
 - Before committing (when asked), run `git status`, `git diff`, and `git log` to understand context and match recent message style in the repo
+- When suggesting or creating a branch: use topic names (`feat/<topic>[/<subtopic>]`); **never** Feature/Slice-ID branch names (`feat/core-f01-xxx`). Authority: hard-constraints §6.
 
 ## Message Format (Conventional Commits)
 

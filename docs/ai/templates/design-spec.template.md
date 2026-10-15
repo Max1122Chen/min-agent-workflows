@@ -60,10 +60,14 @@ Use domain-neutral terms (`OrderService`, `Cache`, `EventBus`, …) unless the p
 |------|-----------------|---------------------|
 | `<module/type>` | `<...>` | `<...>` |
 
+Use cohesion / SRP lenses from `templates/DESIGN_PRINCIPLES.md` — do **not** add a SOLID checklist section.
+
 ## Boundaries
 
 - Allowed interactions:
 - Forbidden interactions / dependency rules:
+
+Prefer low coupling / ISP; see `DESIGN_PRINCIPLES.md`.
 
 ## Dependencies
 

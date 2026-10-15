@@ -22,9 +22,12 @@ User phrase `reconfigure workflow` re-runs the profile flow.
 - New substantial work: assess complexity (L0–L3); register Feature ID; design before large coding when L2+.
 - L2+: Design → Design Review → readiness → Implementation Plan. L3 readiness gate is mandatory.
 - `Draft` / design-review `Not ready` does not authorize large-scale coding.
-- End of meaningful batch: update docs, then propose "prepare commit".
+- End of meaningful batch: Process + Quality DoD, then propose "prepare commit".
 - Honor `WORKFLOW_PROFILE.md` for strictness, autonomy, role, language, and verification bar.
-- Profile cannot disable the commit gate, planning trust tiers, or L3 architectural safety checks.
+- Profile cannot disable: commit gate, planning trust tiers, L3 architectural safety checks, comment ID ban, branch ID ban.
+- No Feature/Slice/Bug/ADR IDs in source comments. Comments: short context-clear *why*.
+- Branches: `feat/<topic>[/<subtopic>]` (e.g. `feat/render`); never `feat/core-f01-xxx`. See hard-constraints §5–§6.
+- Design structure lenses: `docs/ai/templates/DESIGN_PRINCIPLES.md` (merge into engineering-design; no SOLID matrix ceremony).
 
 ## Engineering Design
 

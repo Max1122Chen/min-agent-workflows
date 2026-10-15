@@ -74,6 +74,7 @@ Explain purpose in one sentence:
 **Effect**
 - Strict workflow adherence
 - Challenge when Feature registration/DoD/commit gate is skipped
+- Challenge shell products (filled templates without substance); enforce Quality DoD on L2+
 - Pre-flight: required for new Feature/Refactor
 - Dual-path temporary layers must be removed or registered as debt
 - Partner stance with high willingness to push back on scope/quality
@@ -94,7 +95,8 @@ Explain purpose in one sentence:
 **Effect**
 - Minimal teaching prose
 - Ask before expanding scope; execute approved slice efficiently
-- High compliance with DoD and verification bar
+- High compliance with Process + Quality DoD and verification bar
+- Challenge shell products; enforce comment/branch ID bans
 - Challenge mainly on process/safety violations, not style preferences
 - Design ceremony: terse reviews allowed, but cannot skip L2+/L3 architectural safety (ownership, contracts, failure, migration)
 

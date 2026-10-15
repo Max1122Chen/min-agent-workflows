@@ -8,6 +8,7 @@ Register every new Feature ID before implementation planning.
 | `TMPL-F02` | Workflow profile init wizard | TMPL | Done | [design](./TMPL/TMPL-F02_WORKFLOW_PROFILE_DESIGN.md) | [plan](./TMPL/TMPL-F02_WORKFLOW_PROFILE_IMPLEMENTATION.md) | Max | Meta-question + presets → WORKFLOW_PROFILE |
 | `TMPL-F03` | Doc naming and domain bucketing | TMPL | Done | [design](./TMPL/TMPL-F03_DOC_NAMING_AND_BUCKETING_DESIGN.md) | — | Max | ALL-CAPS Feature-ID filenames; design docs under `docs/ai/<DOMAIN>/` |
 | `TMPL-F04` | Engineering design workflow | TMPL | Done | [design](./TMPL/TMPL-F04_ENGINEERING_DESIGN_WORKFLOW_DESIGN.md) | [plan](./TMPL/TMPL-F04_ENGINEERING_DESIGN_WORKFLOW_IMPLEMENTATION.md) | Max | Design skill, design review, readiness gate, complexity levels |
+| `TMPL-F05` | Artifact quality + design principles | TMPL | Done | [design](./TMPL/TMPL-F05_ARTIFACT_QUALITY_AND_DESIGN_PRINCIPLES_DESIGN.md) | [plan](./TMPL/TMPL-F05_ARTIFACT_QUALITY_AND_DESIGN_PRINCIPLES_IMPLEMENTATION.md) | Max | Quality DoD, comment/branch ID bans, DESIGN_PRINCIPLES card merged into F04 path |
 
 ## Status guidance
 

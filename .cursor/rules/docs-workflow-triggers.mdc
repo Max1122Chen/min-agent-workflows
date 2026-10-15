@@ -16,14 +16,17 @@ When user intent implies one of these, recommend the corresponding workflow befo
 - Significant unknown scope:
   - perform a brief pre-flight (dependencies, risks, debt, verification path) — required when profile says so
   - discover existing architecture before inventing structure
+- Ambiguous non-trivial request (L1+):
+  - short intent playback before large design/coding (user may skip)
 - Bug/regression:
   - create/update bug record with reproduction and regression checks
 - Design review / implementation readiness:
   - use `design-review`; record verdict; do not large-code on `Not ready` / `Draft`
+  - reject shell products (empty TBD on critical decisions, unverifiable acceptance)
 - Handoff/session switch:
   - session note + progress entry + blocked/deferred status for incomplete slices
 - End of meaningful batch:
-  - complete DoD checks, then propose "prepare commit"
+  - complete Process + Quality DoD, then propose "prepare commit"
 - Commit preparation request:
   - draft commit message and wait for explicit execute instruction
 - Profile `unconfigured` on first substantial work:

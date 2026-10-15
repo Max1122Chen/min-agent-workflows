@@ -28,3 +28,17 @@ When context may be stale, re-bootstrap from:
 - `docs/ai/BOOTSTRAP_DIGEST.md`
 - `docs/ai/PROJECT_CONTEXT.md`
 - `docs/ai/ACTIVE_WORK.md`
+
+## 5) Comment hygiene (IDs stay out of code comments)
+
+- **Forbidden** in source comments / code-adjacent inline docs: Feature, Slice, Bug, or ADR IDs (e.g. `CORE-F01`, `CORE-F01-S02`, `BUG-CORE-001`, `ADR-20261015-01`).
+- IDs belong in collaboration docs (registry, ACTIVE_WORK, design/plan/progress) and may appear in commit messages when the team uses them there.
+- Comments explain non-obvious *why*, invariants, hazards, or trade-offs; keep them short; do not restate the next line of code.
+
+## 6) Branch naming (topic granularity; no registry IDs)
+
+- Feature branches use topic paths: `feat/<topic>` or `feat/<topic>/<subtopic>` (e.g. `feat/render`, `feat/render/material`, `feat/gameplay`).
+- Name the **area of change**, not a Feature/Slice row. Prefer an existing matching area branch over a new ID-tied branch.
+- **Forbidden:** branch names built around registry IDs (e.g. `feat/core-f01-xxx`, `feat/TMPL-F05`, `feat/core-f01-s01`).
+- Same ID ban applies to `fix/` / `refactor/` / `chore/` (and similar): topic words only.
+- Profile cannot disable §5 or §6.

@@ -2,6 +2,24 @@
 
 Append-only chronological project record.
 
+## 2026-10-15
+
+- Scope: `TMPL-F05` / `TMPL-F05-S01..S04`
+- Completed:
+  - Design + Implementation Plan for artifact quality, comment/branch ID hygiene, design-principle lenses
+  - Hard constraints §5–§6 (comment ID ban, topic branch naming); wired AGENTS/CLAUDE/Copilot/Cline/Windsurf/bootstrap
+  - Process vs Quality DoD in DOC_GOVERNANCE + `workflow-dod`; executable-slice bar on implementation-plan template
+  - `templates/DESIGN_PRINCIPLES.md` card; extended engineering-design, design-review, implementation-discipline
+  - Intent-playback + shell-product triggers in WORKING_WITH_AI / workflow triggers / presets
+- Verification:
+  - Doc cross-link review (authority map: hard-constraints, DESIGN_PRINCIPLES, DOC_GOVERNANCE §6)
+  - Domain-neutrality scan on new card/skills (no product-engine vocabulary)
+  - Exemplars present for comment/branch/shell good vs bad
+- Docs updated:
+  - `FEATURE_REGISTRY.md`, `ACTIVE_WORK.md`, `PROGRESS_LOG.md`, TMPL-F05 design/plan
+- Next action:
+  - Commit and push `feat/engineering-design-workflow`
+
 ## 2026-09-22
 
 - Scope: `TMPL-F04` / `TMPL-F04-S01..S03`

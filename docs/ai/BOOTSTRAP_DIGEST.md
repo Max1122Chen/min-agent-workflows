@@ -1,6 +1,6 @@
 # Bootstrap Digest
 
-Last updated: 2026-09-22
+Last updated: 2026-10-15
 Purpose: recover collaboration context in under 2 minutes.
 
 ## Read order for a new session
@@ -26,9 +26,11 @@ Purpose: recover collaboration context in under 2 minutes.
 - New substantial work: assess complexity (L0–L3); register ID; design before large coding when L2+.
 - A `Draft` design or design-review `Not ready` does not authorize large-scale coding.
 - L3 architectural safety checks cannot be skipped by profile preset.
-- End of meaningful batch: update docs and propose "prepare commit" before unrelated next work.
+- End of meaningful batch: Process + Quality DoD, then propose "prepare commit" before unrelated next work.
 - Prepare commit is draft-and-review only; execute commit only with explicit user instruction.
-- Profile may tune strictness/autonomy/role/language; it cannot disable the rules above.
+- No Feature/Slice/Bug/ADR IDs in source comments; branches use `feat/<topic>[/<subtopic>]`, never ID-based names.
+- Profile may tune strictness/autonomy/role/language; it cannot disable the rules above (including comment/branch ID bans).
+- Design quality lenses: `templates/DESIGN_PRINCIPLES.md` (via engineering-design / design-review).
 
 ## Engineering design (short)
 

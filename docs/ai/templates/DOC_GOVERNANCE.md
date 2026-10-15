@@ -1,6 +1,6 @@
 # Document Governance
 
-Last updated: 2026-09-22
+Last updated: 2026-10-15
 Status: Active
 
 ## 1) Purpose
@@ -168,7 +168,14 @@ For L2+ (always for L3), do not start large-scale coding until Design Review ver
 
 ## 6) Slice Done Definition (DoD)
 
-### Docs DoD
+DoD has two layers. **Process DoD** = collaboration bookkeeping. **Quality DoD** = artifact substance.  
+L2+: both required before Done. L1: Quality recommended. L0: Process-light only (still obey comment/branch ID bans).
+
+Skill: `.opencode/skills/workflow-dod/SKILL.md`.  
+Principles card: `templates/DESIGN_PRINCIPLES.md`.
+
+### 6.1 Process DoD (Docs)
+
 - Progress entry appended
 - Feature and slice status synchronized
 - Design/Plan updated when scope or status changed
@@ -177,11 +184,27 @@ For L2+ (always for L3), do not start large-scale coding until Design Review ver
 - Bug record updated for defect fixes
 - New design/impl docs follow §3.1 naming and §3.2 domain bucketing
 
-### Engineering DoD
-- Verification command executed and recorded (per profile `verification_bar`)
+### 6.2 Process DoD (Engineering bookkeeping)
+
+- Verification command executed and recorded (per profile `verification_bar`) — command + result, not assertion alone
 - No unrecorded blocking defect discovered during work
 - Public API changes reflected in callers or explicitly documented
 - Implementation matches reviewed design decisions (or documents approved deviation)
+- Touched source comments have no Feature/Slice/Bug/ADR IDs
+- If a branch was created/renamed this batch: topic-granular name (`feat/<topic>[/<subtopic>]`), not ID-based
+
+### 6.3 Quality DoD
+
+- Design (when required): a fresh implementer could plan without chat history; no critical TBD on ownership/API/failure the change needs
+- Plan (when required): each in-scope slice has paths + observable acceptance + verification signal; no empty steps
+- No **shell-product red flag** remains unaddressed (unless explicitly deferred/accepted):
+  - sections that only restate headings or leave critical TBD
+  - strawman alternatives
+  - unverifiable acceptance (“more maintainable”, “properly handled”)
+  - plan steps with no path or no checkable result
+  - “tests/docs updated” with no what/where
+  - “followed SOLID/OCP” with no named structural consequence
+  - Done claimed without verification evidence
 
 ## 7) Handoff requirements
 
