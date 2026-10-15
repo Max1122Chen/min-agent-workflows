@@ -23,6 +23,15 @@ Define independently verifiable slices that implement an already-reviewed design
 |---------------------|----------------|-------|
 | `<D1>` | `<section>` | `<brief>` |
 
+## Executable-slice quality bar
+
+Each slice must be implementable without guessing:
+
+- Concrete paths to create/modify (or an explicit N/A for docs-only with file list)
+- Observable acceptance (what a reviewer can see/run)
+- Verification signal (command and expected pass signal, or doc cross-check named)
+- Ban empty steps: “handle edge cases”, “add appropriate tests”, “update docs as needed”
+
 ## Implementation Slices
 
 | Slice ID | Summary | Design decision | Dependencies | Verification | Status |
@@ -77,7 +86,7 @@ Reuse profile `verification_bar`. Record commands/results in Progress Log when s
 
 - [ ] All in-scope slices Done or explicitly Deferred with note
 - [ ] Design acceptance criteria covered or mapped to deferred work
-- [ ] Docs DoD + engineering DoD satisfied
+- [ ] Process DoD + Quality DoD satisfied (`DOC_GOVERNANCE` §6)
 - [ ] Ready to propose prepare commit
 
 ## Blocked/Deferred note (required if applicable)

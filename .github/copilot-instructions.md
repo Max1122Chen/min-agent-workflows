@@ -20,10 +20,12 @@ User phrase `reconfigure workflow` re-runs profile setup.
 - Never run `git commit` or push without explicit user instruction.
 - Plan from trusted sources only; do not infer backlog from old roadmap or archived docs.
 - New features must be registered in `FEATURE_REGISTRY.md` before implementation.
-- After completing work, update progress log, then propose "prepare commit" as a draft only.
-- Honor `WORKFLOW_PROFILE.md` for strictness/autonomy/role/language; it cannot disable the rules above.
+- After completing work: Process + Quality DoD, then propose "prepare commit" as a draft only.
+- Honor `WORKFLOW_PROFILE.md` for strictness/autonomy/role/language; it cannot disable commit gate, trust tiers, L3 safety, comment ID ban, or branch ID ban.
 - For L2+ work: Design Spec → Design Review → implementation readiness before large coding (see `.opencode/skills/engineering-design` and `design-review`).
 - `Draft` design or design-review `Not ready` does not authorize large-scale coding.
+- No Feature/Slice/Bug/ADR IDs in source comments; branches use `feat/<topic>[/<subtopic>]`, never ID-based names.
+- Structure lenses: `docs/ai/templates/DESIGN_PRINCIPLES.md`.
 
 ### ID Conventions
 

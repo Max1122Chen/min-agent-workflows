@@ -47,6 +47,9 @@ Fill after configure/skip. Keep short and actionable.
 - Plan only from trusted sources (`ACTIVE_WORK`, registry In Progress/Planned, open TECH_DEBT, recent progress, code/tests)
 - `Draft` design does not authorize large-scale coding
 - Level-3 architectural safety checks (ownership/contracts/migration/failure when relevant) cannot be skipped by preset
+- No Feature/Slice/Bug/ADR IDs in source comments
+- Branch names are topic-granular (`feat/<topic>[/<subtopic>]`), never registry-ID-based
+- Quality DoD exists for L2+ (substance, not template shell only)
 
 ## Reconfigure
 

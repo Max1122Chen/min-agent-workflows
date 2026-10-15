@@ -1,6 +1,6 @@
 ---
 name: design-review
-description: Review a Design Spec for completeness and implementation readiness before coding. Focus on ambiguity, missing decisions, ownership/lifetime gaps, failure gaps, integration risk, and overengineering — not typos or formatting. Use after engineering-design for Level 2+ work, or when asked to review a design.
+description: Review a Design Spec for completeness and implementation readiness before coding. Focus on ambiguity, shell-product red flags, missing decisions, ownership/lifetime gaps, failure gaps, integration risk, overengineering, and concrete design-principle findings — not typos or formatting. Use after engineering-design for Level 2+ work, or when asked to review a design.
 ---
 
 # Design Review
@@ -28,8 +28,11 @@ Actively hunt for:
 - integration / migration gaps
 - unverifiable acceptance criteria
 - unnecessary complexity
+- **shell-product red flags** (DOC_GOVERNANCE §6.3)
+- structural principle issues (cohesion/coupling/SRP/OCP/… ) with concrete risk — see `DESIGN_PRINCIPLES.md`
 
-Do **not** spend the review on spelling, formatting, or template cosmetics unless they hide real ambiguity.
+Do **not** spend the review on spelling, formatting, or template cosmetics unless they hide real ambiguity.  
+Do **not** demand a filled SOLID matrix; cite a principle only when naming a real structural risk.
 
 ## Checklist (apply what is relevant)
 

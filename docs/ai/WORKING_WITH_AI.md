@@ -1,6 +1,6 @@
 # Working With AI
 
-Last updated: 2026-09-22
+Last updated: 2026-10-15
 
 ## First deploy / unconfigured profile
 
@@ -45,12 +45,20 @@ Assess complexity (L0–L3). If L2+, run engineering-design then design-review b
 Review this Design Spec for implementation readiness. Do not start large implementation if Not ready.
 ```
 
+```text
+Ambiguous request: play back intent in ~200 words, then one question — or I say skip.
+```
+
 ## Workflow habits
 
 - For substantial new work: register Feature ID before large code edits.
 - Assess complexity; keep L0 trivial work lightweight.
+- For ambiguous L1+ work: short intent playback before large design/coding (user may skip).
 - For L2+/L3: Design Spec → Design Review → readiness → Implementation Plan with design traceability.
 - Separate requirements from proposed solutions; inspect existing architecture first.
+- Challenge shell products (empty critical TBD, unverifiable acceptance, principle theater); Quality DoD required for L2+.
+- Structure lenses: `templates/DESIGN_PRINCIPLES.md` — no SOLID matrix ceremony.
+- No Feature/Slice IDs in source comments; branches `feat/<topic>[/<subtopic>]`, never ID-based.
 - For architecture or scope decisions: create/update a Design Spec and, if needed, an ADR.
 - For cross-module defects found during another task: file a bug record before broad drive-by fixes.
 - For handoff: create a session note, update progress log, and mark incomplete slice status clearly.

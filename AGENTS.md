@@ -36,7 +36,7 @@ On bootstrap / first substantial work:
 5. Do not re-ask when status is `configured`, `default-applied`, or `deferred` (unless user says `reconfigure workflow`).
 
 Profile may tune strictness, autonomy, role, language, topology, verification bar, and implementation discipline.  
-Profile must **not** disable: commit preparation gate, planning trust tiers, or Draft≠large-coding.
+Profile must **not** disable: commit preparation gate, planning trust tiers, Draft≠large-coding, comment ID ban, branch ID ban, or L2+ Quality DoD existence.
 
 ## Naming Guidance
 
@@ -73,6 +73,17 @@ When context may be stale, re-bootstrap from:
 - `docs/ai/PROJECT_CONTEXT.md`
 - `docs/ai/ACTIVE_WORK.md`
 
+### Comment hygiene
+
+- Do not put Feature / Slice / Bug / ADR IDs in source comments. IDs belong in collaboration docs (and optionally commit messages).
+- Comments: short, context-clear *why* / invariants / hazards — not process bookkeeping.
+
+### Branch naming
+
+- Use topic-granular names: `feat/<topic>` or `feat/<topic>/<subtopic>` (e.g. `feat/render`, `feat/render/material`).
+- Do **not** name branches after Feature/Slice IDs (e.g. `feat/core-f01-xxx` is forbidden).
+- Authority: `.cursor/rules/hard-constraints.mdc` §5–§6.
+
 ## Doc Trust Tiers
 
 ### Planning sources (high trust)
@@ -105,6 +116,8 @@ When user intent implies one of these, recommend the corresponding workflow befo
   - for L3: readiness gate is mandatory before large coding
 - Significant unknown scope:
   - perform a brief pre-flight (dependencies, risks, debt, verification path); run discovery before inventing structure
+- Ambiguous non-trivial request (L1+):
+  - short intent playback before large design/coding (user may skip)
 - Bug/regression:
   - create/update bug record with reproduction and regression checks; escalate to design flow if fix implies L2+ redesign
 - Design ready / review design:
@@ -112,7 +125,7 @@ When user intent implies one of these, recommend the corresponding workflow befo
 - Handoff/session switch:
   - session note + progress entry + blocked/deferred status for incomplete slices
 - End of meaningful batch:
-  - complete DoD checks, then propose "prepare commit"
+  - complete Process + Quality DoD (see `DOC_GOVERNANCE` §6 / `workflow-dod`), then propose "prepare commit"
 - Commit preparation request:
   - draft commit message and wait for explicit execute instruction
 - Workflow profile missing / `unconfigured`:
@@ -142,10 +155,11 @@ If `WORKFLOW_PROFILE.md` has `implementation_discipline: on` (or preset implies 
 
 ### Principles
 
-1. Reuse before duplication.
+1. Reuse before duplication (knowledge DRY).
 2. Remove dead or superseded paths in the same change when safe.
 3. If transitional code must remain, register explicit debt with exit condition.
 4. Keep exports and public APIs aligned with actual usage.
+5. Prefer high cohesion / low coupling; extend via existing points (OCP) without speculative hooks (YAGNI). See `docs/ai/templates/DESIGN_PRINCIPLES.md`.
 
 ### Boundary
 
