@@ -18,7 +18,7 @@ Append-only chronological project record.
 - Docs updated:
   - `FEATURE_REGISTRY.md`, `ACTIVE_WORK.md`, `PROGRESS_LOG.md`, TMPL-F05 design/plan
 - Next action:
-  - Review/merge [PR #2](https://github.com/Max1122Chen/min-agent-workflows/pull/2) (`feat/engineering-design-workflow`)
+  - Merged [PR #2](https://github.com/Max1122Chen/min-agent-workflows/pull/2); queue clear
 
 ## 2026-09-22
 
